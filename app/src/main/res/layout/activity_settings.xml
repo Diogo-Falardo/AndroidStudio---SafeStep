@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SafeStep - Defenições"
+        android:textSize="30dp"
+        android:padding="20dp"
+        android:textColor="@color/blue_light"
+        android:background="@color/blue_medium"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Como Colocar Coordenadas (Formato):"
+        android:textColor="@color/blue_medium"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="As coordenadas devem ser colocadas por lat,lon(latitude,longitude) ex.: 38.7535402,-9.2707924 "
+        android:textColor="@color/blue_medium"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Como Apagar Coordenadas/Localizações:"
+        android:textColor="@color/blue_medium"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duplo Clique apaga, ou existe a opção de apagar todas."
+        android:textColor="@color/blue_medium"
+        android:textSize="15dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:layout_marginBottom="25dp"
+        >
+
+        <Button
+            android:id="@+id/set_voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundend_button"
+            android:text="Voltar ao inicio"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_light"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

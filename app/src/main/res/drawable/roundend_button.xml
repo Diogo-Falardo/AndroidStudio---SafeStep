@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cor de fundo do botão -->
+    <solid android:color="@color/blue_royal" />
+
+    <!-- Raio das bordas para deixar o botão redondo -->
+    <corners android:radius="50dp" /> <!-- A porcentagem faz o botão ficar redondo -->
+
+    <!-- Cor da borda -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/blue_light" />
+
+    <!-- Sombra (opcional) -->
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+</shape>

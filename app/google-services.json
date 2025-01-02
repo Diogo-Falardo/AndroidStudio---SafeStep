@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468073163344",
+    "project_id": "safestep-f7331",
+    "storage_bucket": "safestep-f7331.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468073163344:android:0ba1b3aab5b96a07867f55",
+        "android_client_info": {
+          "package_name": "com.example.safestep"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQFuvh5CMI_NgjT6L01wwBPi-htJzNGq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
