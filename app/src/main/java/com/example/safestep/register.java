@@ -86,8 +86,11 @@ public class register extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(register.this, "Conta Criada, Bem Vindo!",
+                                    Toast.makeText(register.this, "Conta Criada com sucesso!",
                                             Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(register.this, "Autenticação Falhou!",
