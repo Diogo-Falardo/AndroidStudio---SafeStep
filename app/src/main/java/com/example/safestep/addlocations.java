@@ -90,6 +90,7 @@ public class addlocations extends AppCompatActivity {
     }
 
 
+
     // Função para validar as coordenadas no formato 'latitude, longitude'
     private boolean isValidCoordinates(String coordenadas) {
         String[] parts = coordenadas.split(",");
