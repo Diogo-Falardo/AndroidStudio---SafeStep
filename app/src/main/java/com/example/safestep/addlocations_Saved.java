@@ -104,9 +104,9 @@ public class addlocations_Saved extends AppCompatActivity {
 
         // Atualiza a TextView com a mensagem
         TextView alertTextView = findViewById(R.id.alert_localizacaoguardas);
-        alertTextView.setText("Nenhuma Localização salva");
+        alertTextView.setText("Nenhuma Localização guardada");
 
-        // Atualiza o adaptador e salva as mudanças
+        // Atualiza o adaptador e guarda as alteraçoes
         adapter.notifyDataSetChanged();
         saveLocations();
 

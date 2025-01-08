@@ -51,8 +51,6 @@ public class login extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        // Incialização das Variaveis Correspondetes ao Register.
-
         edt_email = findViewById(R.id.email);
         edt_password = findViewById(R.id.password);
         go_register = findViewById(R.id.createacc);

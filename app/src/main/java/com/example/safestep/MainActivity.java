@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private MapView mapView;
     private static final int SPEECH_REQUEST_CODE = 100;
     private EditText textInput;
-    private Marker currentMarker; // Para manter o marcador atual
+    private Marker currentMarker; // Marcador
 
 
     @Override
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "E-mail do usuário não está disponível.", Toast.LENGTH_SHORT).show();
                 } else {
                     View headerView = navigationView.getHeaderView(0); // Pega o primeiro header do NavigationView
-                    TextView emailTextView = headerView.findViewById(R.id.user_details); // Aqui você referencia o TextView do header
+                    TextView emailTextView = headerView.findViewById(R.id.user_details); // textview do header
 
                     // Define o e-mail no TextView do header
                     emailTextView.setText(email);
@@ -149,14 +149,14 @@ public class MainActivity extends AppCompatActivity {
         mapView.setMultiTouchControls(true);
 
         // Coordenadas específicas
-        GeoPoint point = new GeoPoint(38.9954378, -9.1411938);
+        GeoPoint point = new GeoPoint(38.7596954, -9.1564376); // IPLUSO
         mapView.getController().setZoom(15);
         mapView.getController().setCenter(point);
 
-        // Adicionar um marcador inicial
+        // Marcador
         currentMarker = new Marker(mapView);
         currentMarker.setPosition(point);
-        currentMarker.setTitle("Localização Simulada");
+        currentMarker.setTitle("Localização Encontrada");
         mapView.getOverlays().add(currentMarker);
         currentMarker.showInfoWindow();
 
@@ -170,7 +170,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void startVoiceRecognition() {
+        // Tentamos Implementar Reconhecimento de Vóz
+/*    private void startVoiceRecognition() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "pt-BR"); // Defina o idioma para português do Brasil
@@ -181,9 +182,9 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, "Reconhecimento de voz não disponível.", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
-    @Override
+/*    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
@@ -191,10 +192,10 @@ public class MainActivity extends AppCompatActivity {
             if (results != null && !results.isEmpty()) {
                 String spokenText = results.get(0);
                 Toast.makeText(this, "Você disse: " + spokenText, Toast.LENGTH_SHORT).show();
-                // Aqui você pode adicionar lógica para lidar com os comandos de voz
+
             }
         }
-    }
+    }*/
 
     private void sendText() {
         String text = textInput.getText().toString();
@@ -241,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mapView.onResume(); // para gerenciar o ciclo de vida do MapView
+        mapView.onResume(); // Map View
     }
 
     @Override
@@ -253,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mapView.onDetach(); // para liberar recursos
+        mapView.onDetach(); // Libertar Recursos
     }
 
     @Override
@@ -265,15 +266,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showMenu(View view) {
-        // Criação do PopupMenu diretamente por código
+        // Criação do Menu
         PopupMenu popupMenu = new PopupMenu(this, view);
 
-        // Recupera as localizações salvas
+        // Recupera as localizações guardadas
         SharedPreferences sharedPreferences = getSharedPreferences("locations", Context.MODE_PRIVATE);
         String data = sharedPreferences.getString("data", "");
 
         if (data.trim().isEmpty()) {
-            // Caso não haja localizações salvas, exiba uma mensagem
+            // Caso não haja localizações guardadas, exiba uma mensagem
             popupMenu.getMenu().add("Nenhuma localização salva.");
         } else {
             // Adiciona cada localização como um item no menu

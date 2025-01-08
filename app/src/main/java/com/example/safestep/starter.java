@@ -8,14 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class starter extends AppCompatActivity {
 
-    private static final int SPLASH_DELAY = 5000; // 5 segundo
+    private static final int SPLASH_DELAY = 5000; // 5 segundos
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.starter);
 
-        // Atrasar execução por 5 segundos e redirecionar
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(starter.this, login.class);
             startActivity(intent);

@@ -29,7 +29,7 @@ public class addlocations extends AppCompatActivity {
         Button locsSalvas = findViewById(R.id.al_locsalavas);
         Button voltarButton = findViewById(R.id.al_voltar);
 
-        // Botão para salvar informações
+        // Botão para guardar informações
         guardarButton.setOnClickListener(v -> {
             String coordenadas = etCoordenadas.getText().toString();
             String nome = etNome.getText().toString();
@@ -38,7 +38,7 @@ public class addlocations extends AppCompatActivity {
                 // Verifica se as coordenadas estão no formato correto
                 if (isValidCoordinates(coordenadas)) {
                     saveLocation(nome, coordenadas);
-                    Toast.makeText(this, "Localização salva!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Localização Guardada!", Toast.LENGTH_SHORT).show();
                     etCoordenadas.setText("");
                     etNome.setText("");
                 } else {
@@ -56,7 +56,7 @@ public class addlocations extends AppCompatActivity {
             finish();
         });
 
-        // Botão para ver locs Salvas
+        // Botão para ver locs Guardadas
         locsSalvas.setOnClickListener(v -> {
             Intent intent = new Intent(addlocations.this, addlocations_Saved.class);
             startActivity(intent);
@@ -84,7 +84,6 @@ public class addlocations extends AppCompatActivity {
             editor.apply();
 
         } catch (Exception e) {
-            // Em caso de erro, exibir mensagem no log para depuração
             e.printStackTrace();
             Toast.makeText(this, "Erro ao salvar localização.", Toast.LENGTH_SHORT).show();
         }

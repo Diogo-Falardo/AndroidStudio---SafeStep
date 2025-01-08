@@ -71,7 +71,6 @@ public class register extends AppCompatActivity {
                 password = String.valueOf(edt_password.getText());
 
                 // Verificar se o email e pass estão vazios
-
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(register.this, "Insira o seu Email", Toast.LENGTH_SHORT).show();
                     return;

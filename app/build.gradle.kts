@@ -46,8 +46,9 @@ dependencies {
     // Dependência do Google Maps
     implementation("com.google.android.gms:play-services-maps:18.0.2")
     implementation("com.google.android.gms:play-services-maps:18.0.2")
-    implementation("com.google.android.gms:play-services-location:21.0.1") // Dependência de localização
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 
+    // Dependência de localização
     implementation ("org.osmdroid:osmdroid-android:6.1.10")
 
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -71,6 +72,6 @@ dependencies {
 
     // https://firebase.google.com/docs/android/setup#available-libraries
 
-    implementation("com.google.android.material:material:1.9.0") // Atualize para a versão mais recente
+    implementation("com.google.android.material:material:1.9.0")
 
 }
